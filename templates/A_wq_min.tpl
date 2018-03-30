@@ -2,7 +2,7 @@
 id=131655907319465355
 symbol=ETHUSD
 period=60
-leftpos=4084
+leftpos=4093
 digits=2
 scale=4
 graph=0
@@ -45,7 +45,7 @@ name=main
 type=2
 object_name=d[CP Bid] Bid Line
 period_flags=0
-create_time=1522354138
+create_time=1522388495
 color=6579300
 style=0
 weight=1
@@ -54,10 +54,10 @@ filling=0
 selectable=1
 hidden=0
 zorder=0
-time_0=1522364400
-value_0=397.000000
-time_1=1522357200
-value_1=397.000000
+time_0=1522396800
+value_0=381.640000
+time_1=1522389600
+value_1=381.640000
 ray=1
 </object>
 </indicator>
@@ -400,7 +400,6 @@ g_lots_martin=true
 g_lots_min=0.05
 g_lots_max=7.2
 g_alert=true
-g_send_notification=true
 </inputs>
 </expert>
 </chart>
