@@ -2,7 +2,7 @@
 id=131655907319465355
 symbol=ETHUSD
 period=60
-leftpos=4093
+leftpos=4183
 digits=2
 scale=4
 graph=0
@@ -14,7 +14,7 @@ shift=0
 ohlc=0
 one_click=0
 one_click_btn=1
-askline=0
+askline=1
 days=0
 descriptions=0
 shift_size=26
@@ -33,7 +33,7 @@ bearcandle_color=8421504
 chartline_color=4294967295
 volumes_color=2237106
 grid_color=4294967295
-askline_color=17919
+askline_color=8421504
 stops_color=17919
 
 <window>
@@ -45,7 +45,7 @@ name=main
 type=2
 object_name=d[CP Bid] Bid Line
 period_flags=0
-create_time=1522388495
+create_time=1522732949
 color=6579300
 style=0
 weight=1
@@ -54,10 +54,10 @@ filling=0
 selectable=1
 hidden=0
 zorder=0
-time_0=1522396800
-value_0=381.640000
-time_1=1522389600
-value_1=381.640000
+time_0=1522742400
+value_0=391.020000
+time_1=1522735200
+value_1=391.020000
 ray=1
 </object>
 </indicator>
@@ -385,10 +385,8 @@ g_enable_long=true
 g_enable_short=true
 g_signal_check_by_ma=true
 g_signal_order_max=1
-g_signal_greater_dragon=false
-g_signal_less_dragon=false
-g_signal_greater_trend=false
-g_signal_less_trend=false
+g_signal_check_by_dragon=false
+g_signal_check_by_trend=false
 g_signal_greater=0.0
 g_signal_less=0.0
 g_trailing_stop_enable=true
@@ -399,7 +397,6 @@ g_trailing_stop_by_channel=true
 g_lots_martin=true
 g_lots_min=0.05
 g_lots_max=7.2
-g_alert=true
 </inputs>
 </expert>
 </chart>
