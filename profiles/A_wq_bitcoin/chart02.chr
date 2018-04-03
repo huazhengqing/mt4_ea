@@ -1,8 +1,8 @@
 <chart>
-id=131659501911956778
-symbol=BTCUSD
+id=131655907319465355
+symbol=ETHUSD
 period=60
-leftpos=4346
+leftpos=4269
 digits=2
 scale=4
 graph=0
@@ -20,9 +20,9 @@ descriptions=0
 shift_size=26
 fixed_pos=0
 window_left=0
-window_top=0
+window_top=448
 window_right=638
-window_bottom=448
+window_bottom=896
 window_type=1
 background_color=657930
 foreground_color=6579300
@@ -45,7 +45,7 @@ name=main
 type=2
 object_name=d[CP Bid] Bid Line
 period_flags=0
-create_time=1522745938
+create_time=1522755724
 color=6579300
 style=0
 weight=1
@@ -54,10 +54,10 @@ filling=0
 selectable=1
 hidden=0
 zorder=0
-time_0=1522753200
-value_0=7313.610000
-time_1=1522746000
-value_1=7313.610000
+time_0=1522764000
+value_0=394.220000
+time_1=1522756800
+value_1=394.220000
 ray=1
 </object>
 </indicator>

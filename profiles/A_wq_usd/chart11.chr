@@ -2,7 +2,7 @@
 id=131350955189238562
 symbol=USDCAD
 period=30
-leftpos=14594
+leftpos=12285
 digits=5
 scale=4
 graph=0
@@ -41,25 +41,6 @@ height=440
 fixed_height=0
 <indicator>
 name=main
-<object>
-type=2
-object_name=d[CP Bid] Bid Line
-period_flags=0
-create_time=1522745911
-color=6579300
-style=0
-weight=1
-background=0
-filling=0
-selectable=1
-hidden=0
-zorder=0
-time_0=1522751400
-value_0=1.286810
-time_1=1522747800
-value_1=1.286810
-ray=1
-</object>
 </indicator>
 <indicator>
 name=Custom Indicator
@@ -71,7 +52,6 @@ window_num=0
 g_alert=1
 g_sendmsg=1
 g_print_screen=1
-g_trend=0
 Indicator_On=true
 </inputs>
 </expert>
