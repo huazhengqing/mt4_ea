@@ -2,7 +2,7 @@
 id=131672193177530663
 symbol=BTGUSD
 period=60
-leftpos=1731
+leftpos=1737
 digits=2
 scale=4
 graph=0
@@ -45,7 +45,7 @@ name=main
 type=2
 object_name=d[CP Bid] Bid Line
 period_flags=0
-create_time=1522755721
+create_time=1522778076
 color=6579300
 style=0
 weight=1
@@ -54,10 +54,10 @@ filling=0
 selectable=1
 hidden=0
 zorder=0
-time_0=1522764000
-value_0=42.710000
-time_1=1522756800
-value_1=42.710000
+time_0=1522785600
+value_0=46.210000
+time_1=1522778400
+value_1=46.210000
 ray=1
 </object>
 </indicator>
