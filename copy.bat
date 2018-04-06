@@ -39,7 +39,7 @@ xcopy "D:\dev\mm\mt4_ea\*"     "."   /s /E /i /y
 
 
 
-pause
+#pause
 
 
 

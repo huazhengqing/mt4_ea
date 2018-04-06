@@ -2,7 +2,7 @@
 id=131655907346116880
 symbol=XRPUSD
 period=60
-leftpos=1512
+leftpos=1576
 digits=3
 scale=4
 graph=0
@@ -41,25 +41,6 @@ height=440
 fixed_height=0
 <indicator>
 name=main
-<object>
-type=2
-object_name=d[CP Bid] Bid Line
-period_flags=0
-create_time=1522777987
-color=6579300
-style=0
-weight=1
-background=0
-filling=0
-selectable=1
-hidden=0
-zorder=0
-time_0=1522785600
-value_0=0.523000
-time_1=1522778400
-value_1=0.523000
-ray=1
-</object>
 </indicator>
 <indicator>
 name=Custom Indicator
@@ -392,8 +373,10 @@ g_signal_less=0.0
 g_trailing_stop_enable=true
 g_trailing_stop_for_all_order=true
 g_trailing_stop_by_ha=false
-g_trailing_stop_by_ma=false
+g_trailing_stop_by_dragon=false
+g_trailing_stop_by_trend=false
 g_trailing_stop_by_channel=true
+g_trailing_stop_clasp=false
 g_lots_martin=true
 g_lots_min=0.05
 g_lots_max=7.2
