@@ -1,8 +1,8 @@
 <chart>
-id=131655907319465355
-symbol=ETHUSD
+id=131659501911956778
+symbol=BTCUSD
 period=60
-leftpos=4339
+leftpos=4480
 digits=2
 scale=4
 graph=0
@@ -20,9 +20,9 @@ descriptions=0
 shift_size=26
 fixed_pos=0
 window_left=0
-window_top=448
+window_top=0
 window_right=638
-window_bottom=896
+window_bottom=448
 window_type=1
 background_color=657930
 foreground_color=6579300

@@ -2,7 +2,7 @@
 id=131655907332186083
 symbol=LTCUSD
 period=60
-leftpos=1699
+leftpos=1752
 digits=2
 scale=4
 graph=0
@@ -41,25 +41,6 @@ height=440
 fixed_height=0
 <indicator>
 name=main
-<object>
-type=2
-object_name=d[CP Bid] Bid Line
-period_flags=0
-create_time=1523034470
-color=6579300
-style=0
-weight=1
-background=0
-filling=0
-selectable=1
-hidden=0
-zorder=0
-time_0=1523044800
-value_0=112.180000
-time_1=1523037600
-value_1=112.180000
-ray=1
-</object>
 </indicator>
 <indicator>
 name=Custom Indicator
@@ -378,12 +359,12 @@ show_data=1
 
 <expert>
 name=A_wq_ha
-flags=341
+flags=339
 window_num=0
 <inputs>
 g_enable_long=true
-g_enable_short=false
-g_signal_check_by_ma=false
+g_enable_short=true
+g_signal_check_by_ma=true
 g_signal_order_max=1
 g_signal_check_by_dragon=false
 g_signal_check_by_trend=false

@@ -2,7 +2,7 @@
 id=131655907319465355
 symbol=ETHUSD
 period=60
-leftpos=4183
+leftpos=4347
 digits=2
 scale=4
 graph=0
@@ -21,7 +21,7 @@ shift_size=26
 fixed_pos=0
 window_left=0
 window_top=0
-window_right=958
+window_right=638
 window_bottom=448
 window_type=1
 background_color=657930
@@ -45,7 +45,7 @@ name=main
 type=2
 object_name=d[CP Bid] Bid Line
 period_flags=0
-create_time=1522732949
+create_time=1523036649
 color=6579300
 style=0
 weight=1
@@ -54,10 +54,10 @@ filling=0
 selectable=1
 hidden=0
 zorder=0
-time_0=1522742400
-value_0=391.020000
-time_1=1522735200
-value_1=391.020000
+time_0=1523044800
+value_0=364.760000
+time_1=1523037600
+value_1=364.760000
 ray=1
 </object>
 </indicator>
@@ -378,7 +378,7 @@ show_data=1
 
 <expert>
 name=A_wq_ha
-flags=339
+flags=83
 window_num=0
 <inputs>
 g_enable_long=true
@@ -392,11 +392,13 @@ g_signal_less=0.0
 g_trailing_stop_enable=true
 g_trailing_stop_for_all_order=true
 g_trailing_stop_by_ha=false
-g_trailing_stop_by_ma=false
+g_trailing_stop_by_dragon=false
+g_trailing_stop_by_trend=false
 g_trailing_stop_by_channel=true
+g_trailing_stop_clasp=false
 g_lots_martin=true
-g_lots_min=0.05
-g_lots_max=7.2
+g_lots_min=0.01
+g_lots_max=5.0
 </inputs>
 </expert>
 </chart>
