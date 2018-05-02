@@ -1,8 +1,8 @@
 <chart>
 id=131672193177530663
 symbol=BTGUSD
-period=60
-leftpos=1862
+period=240
+leftpos=505
 digits=2
 scale=4
 graph=0
@@ -41,6 +41,25 @@ height=440
 fixed_height=0
 <indicator>
 name=main
+<object>
+type=2
+object_name=d[CP Bid] Bid Line
+period_flags=0
+create_time=1525256843
+color=6579300
+style=0
+weight=1
+background=0
+filling=0
+selectable=1
+hidden=0
+zorder=0
+time_0=1525276800
+value_0=74.150000
+time_1=1525248000
+value_1=74.150000
+ray=1
+</object>
 </indicator>
 <indicator>
 name=Custom Indicator
@@ -359,13 +378,15 @@ show_data=1
 
 <expert>
 name=A_wq_ha
-flags=339
+flags=337
 window_num=0
 <inputs>
 g_enable_long=true
 g_enable_short=true
-g_signal_check_by_ma=true
-g_signal_order_max=1
+g_estimate_trend_by_ma_dragon=true
+g_estimate_trend_by_ma_trend=false
+g_estimate_trend_by_ma_across=false
+g_order_max=1
 g_signal_check_by_dragon=false
 g_signal_check_by_trend=false
 g_signal_greater=0.0
@@ -373,13 +394,13 @@ g_signal_less=0.0
 g_trailing_stop_enable=true
 g_trailing_stop_for_all_order=true
 g_trailing_stop_by_ha=false
-g_trailing_stop_by_dragon=false
+g_trailing_stop_by_dragon=true
 g_trailing_stop_by_trend=false
 g_trailing_stop_by_channel=true
 g_trailing_stop_clasp=false
 g_lots_martin=true
-g_lots_min=0.05
-g_lots_max=7.2
+g_lots_min=0.01
+g_lots_max=5.0
 </inputs>
 </expert>
 </chart>
