@@ -1,8 +1,8 @@
 <chart>
-id=131672193177530663
+id=131700776359962229
 symbol=BTGUSD
 period=240
-leftpos=205
+leftpos=533
 digits=2
 scale=4
 graph=0
@@ -23,7 +23,7 @@ window_left=1276
 window_top=448
 window_right=1914
 window_bottom=896
-window_type=3
+window_type=1
 background_color=657930
 foreground_color=6579300
 barup_color=4294967295
@@ -45,7 +45,7 @@ name=main
 type=2
 object_name=d[CP Bid] Bid Line
 period_flags=0
-create_time=1525591063
+create_time=1525664063
 color=6579300
 style=0
 weight=1
@@ -54,10 +54,10 @@ filling=0
 selectable=1
 hidden=0
 zorder=0
-time_0=1525622400
-value_0=77.250000
-time_1=1525593600
-value_1=77.250000
+time_0=1525694400
+value_0=71.260000
+time_1=1525665600
+value_1=71.260000
 ray=1
 </object>
 </indicator>
@@ -378,7 +378,7 @@ show_data=1
 
 <expert>
 name=A_wq_ha
-flags=339
+flags=83
 window_num=0
 <inputs>
 g_enable_long=true

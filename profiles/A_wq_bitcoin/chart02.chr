@@ -2,14 +2,14 @@
 id=131655907319465355
 symbol=ETHUSD
 period=60
-leftpos=1817
+leftpos=5047
 digits=2
 scale=4
 graph=0
 fore=0
 grid=0
 volume=0
-scroll=0
+scroll=1
 shift=0
 ohlc=0
 one_click=0
@@ -23,7 +23,7 @@ window_left=0
 window_top=448
 window_right=638
 window_bottom=896
-window_type=3
+window_type=1
 background_color=657930
 foreground_color=6579300
 barup_color=4294967295
@@ -41,6 +41,25 @@ height=440
 fixed_height=0
 <indicator>
 name=main
+<object>
+type=2
+object_name=d[CP Bid] Bid Line
+period_flags=0
+create_time=1525664069
+color=6579300
+style=0
+weight=1
+background=0
+filling=0
+selectable=1
+hidden=0
+zorder=0
+time_0=1525672800
+value_0=741.840000
+time_1=1525665600
+value_1=741.840000
+ray=1
+</object>
 </indicator>
 <indicator>
 name=Custom Indicator

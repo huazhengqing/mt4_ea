@@ -2,7 +2,7 @@
 id=131655907346116880
 symbol=XRPUSD
 period=60
-leftpos=2246
+leftpos=2284
 digits=3
 scale=4
 graph=0
@@ -41,6 +41,25 @@ height=440
 fixed_height=0
 <indicator>
 name=main
+<object>
+type=2
+object_name=d[CP Bid] Bid Line
+period_flags=0
+create_time=1525664059
+color=6579300
+style=0
+weight=1
+background=0
+filling=0
+selectable=1
+hidden=0
+zorder=0
+time_0=1525672800
+value_0=0.800000
+time_1=1525665600
+value_1=0.800000
+ray=1
+</object>
 </indicator>
 <indicator>
 name=Custom Indicator
