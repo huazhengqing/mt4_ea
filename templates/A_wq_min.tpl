@@ -2,7 +2,7 @@
 id=131659501911956778
 symbol=BTCUSD
 period=60
-leftpos=5127
+leftpos=5140
 digits=2
 scale=4
 graph=0
@@ -45,7 +45,7 @@ name=main
 type=2
 object_name=d[CP Bid] Bid Line
 period_flags=0
-create_time=1525664488
+create_time=1525712238
 color=6579300
 style=0
 weight=1
@@ -54,10 +54,10 @@ filling=0
 selectable=1
 hidden=0
 zorder=0
-time_0=1525672800
-value_0=9262.320000
-time_1=1525665600
-value_1=9262.320000
+time_0=1525719600
+value_0=9319.900000
+time_1=1525712400
+value_1=9319.900000
 ray=1
 </object>
 </indicator>
@@ -374,6 +374,43 @@ weight_0=0
 period_flags=0
 show_data=1
 </indicator>
+<indicator>
+name=Custom Indicator
+<expert>
+name=A_wq_PinbarDetector
+flags=339
+window_num=0
+<inputs>
+CountBars=0
+DisplayDistance=15
+UseCustomSettings=false
+CustomMaxNoseBodySize=0.33
+CustomNoseBodyPosition=0.4
+CustomLeftEyeOppositeDirection=true
+CustomNoseSameDirection=false
+CustomNoseBodyInsideLeftEyeBody=false
+CustomLeftEyeMinBodySize=0.1
+CustomNoseProtruding=0.5
+CustomNoseBodyToLeftEyeBody=1.0
+CustomNoseLengthToLeftEyeLength=0.0
+CustomLeftEyeDepth=0.1
+</inputs>
+</expert>
+shift_0=0
+draw_0=3
+color_0=255
+style_0=0
+weight_0=2
+arrow_0=74
+shift_1=0
+draw_1=3
+color_1=65280
+style_1=0
+weight_1=2
+arrow_1=74
+period_flags=0
+show_data=1
+</indicator>
 </window>
 
 <expert>
@@ -402,7 +439,7 @@ g_break_even=true
 g_break_even_clasp=false
 g_lots_martin=true
 g_lots_min=0.01
-g_lots_max=3.0
+g_lots_max=2.0
 </inputs>
 </expert>
 </chart>

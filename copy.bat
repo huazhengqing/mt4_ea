@@ -4,9 +4,9 @@ copy  "*.bat"    "D:\dev\mm\mt4_ea\"
 
 
 cd "%UserProfile%\AppData\Roaming\MetaQuotes\Terminal\39369E9A010897DDC6DFB2F026E04236\"
-xcopy ".\profiles\A_wq_bitcoin\*"    		"D:\dev\mm\mt4_ea\profiles\A_wq_bitcoin\"      /s /E /i /y
-xcopy ".\profiles\A_wq_usd\*"    			"D:\dev\mm\mt4_ea\profiles\A_wq_usd\"      /s /E /i /y
-xcopy ".\profiles\A_wq_commodity\*"    			"D:\dev\mm\mt4_ea\profiles\A_wq_commodity\"      /s /E /i /y
+#xcopy ".\profiles\A_wq_bitcoin\*"    		"D:\dev\mm\mt4_ea\profiles\A_wq_bitcoin\"      /s /E /i /y
+#xcopy ".\profiles\A_wq_usd\*"    			"D:\dev\mm\mt4_ea\profiles\A_wq_usd\"      /s /E /i /y
+#xcopy ".\profiles\A_wq_commodity\*"    			"D:\dev\mm\mt4_ea\profiles\A_wq_commodity\"      /s /E /i /y
 
 
 
