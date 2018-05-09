@@ -4,7 +4,6 @@
 #property indicator_color1  Gold
 
 
-
 input int InpDepth=12;     // Depth
 input int InpDeviation=5;  // Deviation
 input int InpBackstep=3;   // Backstep

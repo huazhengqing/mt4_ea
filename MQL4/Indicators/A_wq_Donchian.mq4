@@ -1,22 +1,13 @@
-//+------------------------------------------------------------------+
-//|                      Donchian Channels - Generalized version.mq4 |
-//|                         Copyright ?2005, Luis Guilherme Damiani |
-//|                                      http://www.damianifx.com.br |
-//+------------------------------------------------------------------+
-#property copyright "Copyright ?2005, Luis Guilherme Damiani"
-#property link      "http://www.damianifx.com.br"
-
-
+/*
+http://www.damianifx.com.br
+*/
 #property indicator_chart_window
 #property indicator_buffers 2
 #property indicator_color1 Magenta
 #property indicator_color2 Magenta
 
 
-
-
 extern int Periods = 40;
-
 
 
 double ExtMapBuffer1[];
@@ -34,14 +25,11 @@ int init()
 	return(0);
 }
 
-
 int deinit()
 {
 	return(0);
 }
 
-  
-  
 int start()
 {
 	int counted_bars = IndicatorCounted();
@@ -74,8 +62,3 @@ int start()
 	
 	return(0);
 }
-
-
-
-
-
