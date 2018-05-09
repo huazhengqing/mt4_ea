@@ -92,7 +92,7 @@ int start()
 				g_buy_flag = true;
 				g_sell_flag = false;
 				if (i <= 0)
-					SendAlert("buy");
+					alert("buy");
 			}
 		}
 		if (!g_sell_flag)
@@ -103,7 +103,7 @@ int start()
 				g_sell_flag = true;
 				g_buy_flag = false;
 				if (i <= 0)
-					SendAlert("sell");
+					alert("sell");
 			}
 		}
 		if (g_buy_flag)
@@ -113,7 +113,7 @@ int start()
 				g_buy_close[i] = High[i] + (atr) * 1;
 				g_buy_flag = false;
 				if (i <= 0)
-					SendAlert("buy_close");
+					alert("buy_close");
 			}
 		}
 		if (g_sell_flag)
@@ -123,7 +123,7 @@ int start()
 				g_sell_close[i] = Low[i] - (atr) * 1;
 				g_sell_flag = false;
 				if (i <= 0)
-					SendAlert("sell_close");
+					alert("sell_close");
 			}
 		}
 	}
@@ -210,29 +210,45 @@ bool Sell_close()
 	return (res);
 }
 
-string TimeframeToString(int P)
+
+string get_time_frame_str(int time_frame)
 {
-   switch(P)
-   {
-      case PERIOD_M1:  return("M1");
-      case PERIOD_M5:  return("M5");
-      case PERIOD_M15: return("M15");
-      case PERIOD_M30: return("M30");
-      case PERIOD_H1:  return("H1");
-      case PERIOD_H4:  return("H4");
-      case PERIOD_D1:  return("D1");
-      case PERIOD_W1:  return("W1");
-      case PERIOD_MN1: return("MN1");
-   }
-   return("");
+	if (time_frame == 0)
+	{
+		time_frame = Period();
+	}
+	switch (time_frame)
+	{
+	case PERIOD_M1: return "M1";break;
+	case PERIOD_M5: return "M5";break;
+	case PERIOD_M15: return "M15";break;
+	case PERIOD_M30: return "M30";break;
+	case PERIOD_H1: return "H1";break;
+	case PERIOD_H4: return "H4";break;
+	case PERIOD_D1: return "D1";break;
+	}
+	return "";
 }
 
-void SendAlert(string dir)
-{
-	Alert("[", Symbol(), "][", TimeframeToString(Period()), "][AC_RSI][", dir, "]");
-	//PlaySound("alert.wav");
-}
 
+datetime g_alert_time = 0;
+void alert(string msg)
+{
+	if (IsTesting() || IsDemo() || IsStopped())
+	{
+		return;
+	}
+	if (StringLen(msg) <= 0)
+	{
+		return;
+	}
+	const string s = "[" + Symbol() + "][" + get_time_frame_str(Period()) + "][AC_RSI]" + msg;
+	if (g_alert_time < iTime(Symbol(), Period(), 0))
+	{
+		g_alert_time = iTime(Symbol(), Period(), 0);
+		Alert(s);
+	}
+}
 
 
 
