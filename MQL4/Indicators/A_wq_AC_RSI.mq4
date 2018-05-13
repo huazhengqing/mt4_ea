@@ -10,12 +10,11 @@
 #property indicator_width4 0
 
 
-input int period = 8;
+input int period = 11;
 
-
-int g_index_rsi = 0;
+double g_rsi = 0.0;
 int g_index_ac = 0;
-
+double g_atr = 0.0;
 
 double g_buy[];
 double g_buy_close[];
@@ -80,77 +79,51 @@ int start()
 	}
 	for (int i = limit - 1; i >= 0; i--)
 	{
-		depth_trend(i);
+		g_rsi = iRSI(Symbol(), Period(), period, PRICE_CLOSE, i);
 		speed_ac(i);
-		double atr = iATR(Symbol(), Period(), 16, i);
+		g_atr = iATR(Symbol(), Period(), 16, i);
 		
 		if (!g_buy_flag)
 		{
-			if (Buy())
+			if (g_rsi >= 70.0 && g_index_ac >= 1)
 			{
-				g_buy[i] = Low[i] - (atr) * 1.5;
+				g_buy[i] = Low[i] - (g_atr) * 1.5;
 				g_buy_flag = true;
 				g_sell_flag = false;
-				if (i <= 0)
-					alert("buy");
 			}
 		}
 		if (!g_sell_flag)
 		{
-			if (Sell())
+			if (g_rsi <= 30.0 && g_index_ac <= -1)
 			{
-				g_sell[i] = High[i] + (atr) * 1.5;
+				g_sell[i] = High[i] + (g_atr) * 1.5;
 				g_sell_flag = true;
 				g_buy_flag = false;
-				if (i <= 0)
-					alert("sell");
 			}
 		}
 		if (g_buy_flag)
 		{
-			if(Buy_close())
+			if (g_index_ac < 0
+				&& g_rsi > 70.0
+				)
 			{
-				g_buy_close[i] = High[i] + (atr) * 1;
+				g_buy_close[i] = High[i] + (g_atr) * 1;
 				g_buy_flag = false;
-				if (i <= 0)
-					alert("buy_close");
 			}
 		}
 		if (g_sell_flag)
 		{
-			if(Sell_close())
+			if (g_index_ac > 0
+				&& g_rsi < 30.0
+				)
 			{
-				g_sell_close[i] = Low[i] - (atr) * 1;
+				g_sell_close[i] = Low[i] - (g_atr) * 1;
 				g_sell_flag = false;
-				if (i <= 0)
-					alert("sell_close");
 			}
 		}
 	}
 	
 	return(0);
-}
-
-void depth_trend(int i)
-{
-	double rsi = iRSI(Symbol(), Period(), period, PRICE_CLOSE, i);
-	g_index_rsi = 0;
-	if(rsi>90.0) 
-		g_index_rsi=4;
-	else if(rsi>80.0)
-		g_index_rsi=3;
-	else if(rsi>70.0)
-		g_index_rsi=2;
-	else if(rsi>60.0)
-		g_index_rsi=1;
-	else if(rsi<10.0)
-		g_index_rsi=-4;
-	else if(rsi<20.0)
-		g_index_rsi=-3;
-	else if(rsi<30.0)
-		g_index_rsi=-2;
-	else if(rsi<40.0)
-		g_index_rsi=-1;
 }
 
 void speed_ac(int j)
@@ -160,56 +133,23 @@ void speed_ac(int j)
 	for(int i=0; i<5; i++)
 		ac[i]=iAC(Symbol(), Period(), i+j);
 	g_index_ac=0;
-	if(ac[0]>ac[1])
-		g_index_ac=1;
-	else if(ac[0]>ac[1] && ac[1]>ac[2])
-		g_index_ac=2;
+	if(ac[0]>ac[1] && ac[1]>ac[2] && ac[2]>ac[3] && ac[3]>ac[4])
+		g_index_ac=4;
 	else if(ac[0]>ac[1] && ac[1]>ac[2] && ac[2]>ac[3])
 		g_index_ac=3;
-	else if(ac[0]>ac[1] && ac[1]>ac[2] && ac[2]>ac[3] && ac[3]>ac[4])
-		g_index_ac=4;
-	else if(ac[0]<ac[1])
-		g_index_ac=-1;
-	else if(ac[0]<ac[1] && ac[1]<ac[2])
-		g_index_ac=-2;
-	else if(ac[0]<ac[1] && ac[1]<ac[2] && ac[2]<ac[3])
-		g_index_ac=-3;
+	else if(ac[0]>ac[1] && ac[1]>ac[2])
+		g_index_ac=2;
+	else if(ac[0]>ac[1])
+		g_index_ac=1;
 	else if(ac[0]<ac[1] && ac[1]<ac[2] && ac[2]<ac[3] && ac[3]<ac[4])
 		g_index_ac=-4;
+	else if(ac[0]<ac[1] && ac[1]<ac[2] && ac[2]<ac[3])
+		g_index_ac=-3;
+	else if(ac[0]<ac[1] && ac[1]<ac[2])
+		g_index_ac=-2;
+	else if(ac[0]<ac[1])
+		g_index_ac=-1;
 }
-
-bool Buy()
-{
-	bool res=false;
-	if((g_index_rsi==2 && g_index_ac>=1) || (g_index_rsi==3 && g_index_ac==1))
-		res=true;
-	return (res);
-}
-
-bool Sell()
-{
-	bool res=false;
-	if((g_index_rsi==-2 && g_index_ac<=-1) || (g_index_rsi==-3 && g_index_ac==-1))
-		res=true;
-	return (res);
-}
-
-bool Buy_close()
-{
-	bool res=false;
-	if(g_index_rsi>2 && g_index_ac<0)
-		res=true;
-	return (res);
-}
-
-bool Sell_close()
-{
-	bool res=false;
-	if(g_index_rsi<-2 && g_index_ac>0)
-		res=true;
-	return (res);
-}
-
 
 string get_time_frame_str(int time_frame)
 {
