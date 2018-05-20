@@ -157,11 +157,11 @@ int start()
 		DragonLow[i]  = iMA(NULL,NULL,g_ma_dragon_period,0,g_ma_mode,PRICE_LOW,BarShift);
 		DragonTop[i]  = iMA(NULL,NULL,g_ma_dragon_period,0,g_ma_mode,PRICE_HIGH,BarShift);
 		DragonBot[i]  = iMA(NULL,NULL,g_ma_dragon_period,0,g_ma_mode,PRICE_LOW,BarShift);
-		DragonCntrArea[i] = iMA(NULL,NULL,g_ma_dragon_period,0,g_ma_mode,PRICE_CLOSE,BarShift);
-		DragonCntrLine[i] = iMA(NULL,NULL,g_ma_dragon_period,0,g_ma_mode,PRICE_CLOSE,BarShift);
+		DragonCntrArea[i] = iMA(NULL,NULL,g_ma_dragon_period,0,g_ma_mode,PRICE_TYPICAL,BarShift);
+		DragonCntrLine[i] = iMA(NULL,NULL,g_ma_dragon_period,0,g_ma_mode,PRICE_TYPICAL,BarShift);
 		
 		BarShift = iBarShift(NULL,NULL,Time[i],true);
-		Trend[i]= iMA(NULL,NULL,g_ma_trend_period,0,g_ma_mode,PRICE_CLOSE,BarShift);
+		Trend[i]= iMA(NULL,NULL,g_ma_trend_period,0,g_ma_mode,PRICE_TYPICAL,BarShift);
 	}
 	
 	return(0);
