@@ -2,7 +2,7 @@
 id=131659501911956778
 symbol=BTCUSD
 period=240
-leftpos=1281
+leftpos=1297
 digits=2
 scale=4
 graph=0
@@ -45,7 +45,7 @@ name=main
 type=2
 object_name=d[CP Bid] Bid Line
 period_flags=0
-create_time=1526854395
+create_time=1527079365
 color=6579300
 style=0
 weight=1
@@ -54,10 +54,10 @@ filling=0
 selectable=1
 hidden=0
 zorder=0
-time_0=1526875200
-value_0=8507.870000
-time_1=1526846400
-value_1=8507.870000
+time_0=1527105600
+value_0=7874.260000
+time_1=1527076800
+value_1=7874.260000
 ray=1
 </object>
 </indicator>
@@ -460,9 +460,11 @@ window_num=0
 g_enable_long=true
 g_enable_short=true
 g_order_max=1
+g_signal_ha_reverse=true
+g_signal_ma_reverse=true
 g_signal_breakout=false
 g_signal_check_trend=true
-g_signal_check_volatile=false
+g_signal_check_volatile=true
 g_signal_check_by_dragon=false
 g_signal_check_by_trend=false
 g_signal_check_greater=0.0
@@ -471,14 +473,17 @@ g_lots_martin=true
 g_lots_min=0.1
 g_lots_max=0.5
 g_lots_balance=false
+g_lots_balance_sum_max=1.0
+g_lots_balance_unit=0.05
+g_lots_balance_reduce=0.1
 g_stop_enable=true
-g_stop_for_all_order=false
+g_stop_for_all_order=true
 g_stop_by_ha=false
 g_stop_by_dragon=false
 g_stop_by_trend=false
 g_stop_by_channel=true
-g_break_even=false
-g_break_even_clasp=false
+g_break_even_3atr=false
+g_break_even_ha=false
 </inputs>
 </expert>
 </chart>
