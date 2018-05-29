@@ -2,7 +2,7 @@
 id=131659501911956778
 symbol=BTCUSD
 period=240
-leftpos=1008
+leftpos=1010
 digits=2
 scale=4
 graph=0
@@ -45,7 +45,7 @@ name=main
 type=2
 object_name=d[CP Bid] Bid Line
 period_flags=0
-create_time=1527587703
+create_time=1527606572
 color=6579300
 style=0
 weight=1
@@ -54,10 +54,10 @@ filling=0
 selectable=1
 hidden=0
 zorder=0
-time_0=1527609600
-value_0=7096.030000
-time_1=1527580800
-value_1=7096.030000
+time_0=1527638400
+value_0=7394.850000
+time_1=1527609600
+value_1=7394.850000
 ray=1
 </object>
 </indicator>
