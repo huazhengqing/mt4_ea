@@ -45,7 +45,7 @@ name=main
 type=2
 object_name=d[CP Bid] Bid Line
 period_flags=0
-create_time=1527693704
+create_time=1527702263
 color=6579300
 style=0
 weight=1
@@ -55,9 +55,9 @@ selectable=1
 hidden=0
 zorder=0
 time_0=1527724800
-value_0=7298.610000
+value_0=7287.160000
 time_1=1527696000
-value_1=7298.610000
+value_1=7287.160000
 ray=1
 </object>
 </indicator>
