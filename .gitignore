@@ -1,0 +1,12 @@
+.vscode
+.idea
+
+logs/*
+db/*
+!.gitkeep
+!.gitignore
+
+tmp/
+bak/
+.DS_Store
+
