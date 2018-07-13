@@ -23,6 +23,15 @@ cd "%UserProfile%\AppData\Roaming\MetaQuotes\Terminal\C348917D9E28C59E8639142476
 xcopy "D:\dev\mm\mt4_ea\*"     "."   /s /E /i /y
 
 
+cd "%UserProfile%\AppData\Roaming\MetaQuotes\Terminal\50CA3DFB510CC5A8F28B48D1BF2A5702\"
+xcopy "D:\dev\mm\mt4_ea\*"     "."   /s /E /i /y
+
+
+cd "%UserProfile%\AppData\Roaming\MetaQuotes\Terminal\50CA3DFB510CC5A8F28B48D1BF2A5702\"
+xcopy "D:\dev\mm\mt4_ea\*"     "."   /s /E /i /y
+
+
+
 #pause
 
 

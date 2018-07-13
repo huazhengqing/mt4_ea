@@ -2,7 +2,7 @@
 id=131659501911956778
 symbol=BTCUSD
 period=240
-leftpos=1348
+leftpos=1354
 digits=2
 scale=4
 graph=0
@@ -22,7 +22,7 @@ fixed_pos=0
 window_left=0
 window_top=0
 window_right=399
-window_bottom=239
+window_bottom=179
 window_type=3
 background_color=657930
 foreground_color=6579300
@@ -45,7 +45,7 @@ name=main
 type=2
 object_name=d[CP Bid] Bid Line
 period_flags=0
-create_time=1531408373
+create_time=1531499746
 color=6579300
 style=0
 weight=1
@@ -54,10 +54,10 @@ filling=0
 selectable=1
 hidden=0
 zorder=0
-time_0=1531440000
-value_0=6147.580000
-time_1=1531411200
-value_1=6147.580000
+time_0=1531526400
+value_0=6230.760000
+time_1=1531497600
+value_1=6230.760000
 ray=1
 </object>
 </indicator>
@@ -388,6 +388,7 @@ window_num=0
 g_magic=1
 g_enable_long=true
 g_enable_short=true
+g_enable_switch=true
 g_signal_channel_breakout=true
 g_signal_ha_reverse=false
 g_signal_ma_reverse=false
@@ -411,12 +412,12 @@ g_stop_ha_period=240
 g_stop_by_dragon=false
 g_stop_by_trend=false
 g_stop_by_channel=true
-g_stop_channel_period=60
+g_stop_channel_period=240
 g_break_even_3atr=false
 g_break_even_ha=false
 g_break_even_ma=false
-g_break_even_channel=true
-g_break_even_period=0
+g_break_even_channel=false
+g_break_even_period=60
 </inputs>
 </expert>
 </chart>
