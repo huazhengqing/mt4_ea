@@ -3,6 +3,9 @@
 
 logs/*
 db/*
+conf/*
+
+
 !.gitkeep
 !.gitignore
 
