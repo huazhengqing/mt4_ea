@@ -2,7 +2,7 @@
 id=131659501911956778
 symbol=BTCUSD
 period=240
-leftpos=1672
+leftpos=1388
 digits=2
 scale=4
 graph=0
@@ -23,7 +23,7 @@ window_left=0
 window_top=0
 window_right=399
 window_bottom=179
-window_type=1
+window_type=3
 background_color=657930
 foreground_color=6579300
 barup_color=4294967295
@@ -45,7 +45,7 @@ name=main
 type=2
 object_name=d[CP Bid] Bid Line
 period_flags=0
-create_time=1531748113
+create_time=1531999156
 color=6579300
 style=0
 weight=1
@@ -54,10 +54,10 @@ filling=0
 selectable=1
 hidden=0
 zorder=0
-time_0=1531771200
-value_0=6571.300000
-time_1=1531742400
-value_1=6571.300000
+time_0=1532030400
+value_0=7355.570000
+time_1=1532001600
+value_1=7355.570000
 ray=1
 </object>
 </indicator>
@@ -363,18 +363,6 @@ draw_0=0
 color_0=0
 style_0=0
 weight_0=0
-period_flags=0
-show_data=1
-</indicator>
-<indicator>
-name=Bollinger Bands
-period=34
-shift=0
-deviations=2.000000
-apply=6
-color=7451452
-style=0
-weight=1
 period_flags=0
 show_data=1
 </indicator>

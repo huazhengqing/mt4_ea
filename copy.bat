@@ -3,7 +3,7 @@ cd "%UserProfile%\AppData\Roaming\MetaQuotes\Terminal"
 copy  "*.bat"    "D:\dev\mm\mt4_ea\"
 
 
-cd "%UserProfile%\AppData\Roaming\MetaQuotes\Terminal\24DDD2AF4B390B873FBAE45354FC1591\"
+cd "%UserProfile%\AppData\Roaming\MetaQuotes\Terminal\50CA3DFB510CC5A8F28B48D1BF2A5702\"
 #xcopy ".\profiles\A_wq_bitcoin\*"    		"D:\dev\mm\mt4_ea\profiles\A_wq_bitcoin\"      /s /E /i /y
 #xcopy ".\profiles\A_wq_usd\*"    			"D:\dev\mm\mt4_ea\profiles\A_wq_usd\"      /s /E /i /y
 #xcopy ".\profiles\A_wq_commodity\*"    			"D:\dev\mm\mt4_ea\profiles\A_wq_commodity\"      /s /E /i /y
@@ -23,11 +23,11 @@ cd "%UserProfile%\AppData\Roaming\MetaQuotes\Terminal\C348917D9E28C59E8639142476
 xcopy "D:\dev\mm\mt4_ea\*"     "."   /s /E /i /y
 
 
-cd "%UserProfile%\AppData\Roaming\MetaQuotes\Terminal\50CA3DFB510CC5A8F28B48D1BF2A5702\"
+cd "%UserProfile%\AppData\Roaming\MetaQuotes\Terminal\24DDD2AF4B390B873FBAE45354FC1591\"
 xcopy "D:\dev\mm\mt4_ea\*"     "."   /s /E /i /y
 
 
-cd "%UserProfile%\AppData\Roaming\MetaQuotes\Terminal\50CA3DFB510CC5A8F28B48D1BF2A5702\"
+cd "%UserProfile%\AppData\Roaming\MetaQuotes\Terminal\492AB11F94FD656504141104B7FE14BF\"
 xcopy "D:\dev\mm\mt4_ea\*"     "."   /s /E /i /y
 
 
