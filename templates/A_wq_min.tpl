@@ -1,9 +1,9 @@
 <chart>
-id=131659501911956778
-symbol=BTCUSD
-period=240
-leftpos=1388
-digits=2
+id=131776084457431322
+symbol=UKOIL
+period=60
+leftpos=1661
+digits=3
 scale=4
 graph=0
 fore=0
@@ -21,8 +21,8 @@ shift_size=26
 fixed_pos=0
 window_left=0
 window_top=0
-window_right=399
-window_bottom=179
+window_right=1150
+window_bottom=496
 window_type=3
 background_color=657930
 foreground_color=6579300
@@ -45,7 +45,7 @@ name=main
 type=2
 object_name=d[CP Bid] Bid Line
 period_flags=0
-create_time=1531999156
+create_time=1533134914
 color=6579300
 style=0
 weight=1
@@ -54,10 +54,10 @@ filling=0
 selectable=1
 hidden=0
 zorder=0
-time_0=1532030400
-value_0=7355.570000
-time_1=1532001600
-value_1=7355.570000
+time_0=1533142800
+value_0=73.342000
+time_1=1533135600
+value_1=73.342000
 ray=1
 </object>
 </indicator>
@@ -369,20 +369,24 @@ show_data=1
 </window>
 
 <expert>
-name=A_wq_reaper_trend
+name=A_wq_trend
 flags=339
 window_num=0
 <inputs>
 g_magic=1
 g_enable_long=true
 g_enable_short=true
-g_enable_switch=true
+g_enable_switch=false
 g_signal_channel_breakout=true
 g_signal_ha_reverse=false
 g_signal_ma_reverse=false
 g_signal_wave_breakout=false
-g_signal_filter_trend=true
-g_signal_filter_trend_timeframe=240
+g_filter_trend=true
+g_filter_trend_PERIOD_M15=true
+g_filter_trend_PERIOD_M30=true
+g_filter_trend_PERIOD_H1=true
+g_filter_trend_PERIOD_H4=true
+g_filter_trend_PERIOD_D1=true
 g_signal_ha_filter_by_dragon=false
 g_signal_ha_filter_by_trend=false
 g_signal_ha_filter_greater=0.0
@@ -404,7 +408,7 @@ g_stop_channel_period=240
 g_break_even_3atr=false
 g_break_even_ha=false
 g_break_even_ma=false
-g_break_even_channel=true
+g_break_even_channel=false
 g_break_even_period=60
 </inputs>
 </expert>
