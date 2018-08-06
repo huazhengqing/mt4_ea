@@ -4,7 +4,6 @@
 
 extern bool g_stop_enable = true;   // [止损]
 
-
 // ==========================================================================
 
 class stoploss
@@ -140,7 +139,6 @@ void stoploss::modify_long_stoploss(double sl)
 		sl = MathMin(sl, Bid - (g_stop_level + 0) * g_point);
 		sl = NormalizeDouble(sl, g_digits);
 		if (sl > OrderStopLoss() || OrderStopLoss() <= 0)
-		//if (sl != OrderStopLoss())
 		{
 			bool r = OrderModify(OrderTicket(), OrderOpenPrice(), sl, OrderTakeProfit(), OrderExpiration());
 			 _update_sl_long = true;

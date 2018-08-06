@@ -16,7 +16,6 @@ extern bool g_break_even_ma = false;							// [止损:保本] 用慢均线
 extern bool g_break_even_channel = false;						// [止损:保本] 用通道线
 extern ENUM_TIMEFRAMES g_break_even_period = PERIOD_H1;			// [止损:保本:通道] 时间周期
 
-
 // ==========================================================================
 
 class stoploss_trend : public stoploss

@@ -140,15 +140,24 @@ int signal_martin::check_trend()
 			ret_M5 = -1;
 		}
 	}
-	//if (ret_D1 == 1 && ret_H4 == 1 && ret_H1 == 1 && ret_M30 == 1 && ret_M15 == 1)
-	if (ret_D1 == 1 || ret_H4 == 1 || ret_H1 == 1 || ret_M30 == 1 || ret_M15 == 1 || ret_M5 == 1)
+	if (ret == 0)
+		ret = g_bars_H4.check_trend();
+	if (ret == 0)
+		ret = g_bars_H1.check_trend();
+	if (ret == 0)
+		ret = g_bars_M30.check_trend();
+	if (ret == 0)
 	{
-		ret = 1;
-	}
-	//if (ret_D1 == -1 && ret_H4 == -1 && ret_H1 == -1 && ret_M30 == -1 && ret_M15 == -1)
-	if (ret_D1 == -1 || ret_H4 == -1 || ret_H1 == -1 || ret_M30 == -1 || ret_M15 == -1 || ret_M5 == -1)
-	{
-		ret = -1;
+		//if (ret_D1 == 1 && ret_H4 == 1 && ret_H1 == 1 && ret_M30 == 1 && ret_M15 == 1)
+		if (ret_D1 == 1 || ret_H4 == 1 || ret_H1 == 1 || ret_M30 == 1 || ret_M15 == 1 || ret_M5 == 1)
+		{
+			ret = 1;
+		}
+		//if (ret_D1 == -1 && ret_H4 == -1 && ret_H1 == -1 && ret_M30 == -1 && ret_M15 == -1)
+		if (ret_D1 == -1 || ret_H4 == -1 || ret_H1 == -1 || ret_M30 == -1 || ret_M15 == -1 || ret_M5 == -1)
+		{
+			ret = -1;
+		}
 	}
 	return ret;
 }
@@ -218,7 +227,7 @@ bool signal_martin::is_long()
 		double f = 1.0;
 		if (g_order._trade_get_size >= 6)
 		{
-			f = 1.5;
+			f = 1.3;
 		}
 		gap = gap * MathPow(f, g_order._trade_get_size - 1);
 		if (Bid < g_order._trade[0]._open_price - gap)
@@ -360,7 +369,7 @@ bool signal_martin::is_short()
 		double f = 1.0;
 		if (g_order._trade_get_size >= 6)
 		{
-			f = 1.5;
+			f = 1.3;
 		}
 		gap = gap * MathPow(f, g_order._trade_get_size - 1);
 		if (Bid > g_order._trade[0]._open_price + gap)

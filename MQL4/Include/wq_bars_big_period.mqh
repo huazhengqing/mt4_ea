@@ -10,6 +10,7 @@ public:
 
 	void calc();
 	
+	int check_trend();
 	int check_trend_for_trend();
 	bool check_trend_for_martin(int OP_Type);
 	
@@ -112,6 +113,23 @@ void bars_big_period::calc()
 }
 
 // ===============================================================
+
+int bars_big_period::check_trend()
+{
+   if ((_bars_0._ha_close > _bars_0._ma_dragon_high)
+      && (_bars_0._ma_dragon_centre > _bars_1._ma_dragon_centre)
+      )
+	{
+		return 1;
+	}
+	else if (_bars_0._ha_close < _bars_0._ma_dragon_low
+		&& (_bars_0._ma_dragon_centre < _bars_1._ma_dragon_centre)
+		)
+	{
+		return -1;
+	}
+	return 0;
+}
 
 int bars_big_period::check_trend_for_trend()
 {

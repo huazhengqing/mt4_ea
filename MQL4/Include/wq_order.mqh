@@ -1,4 +1,10 @@
 #property strict
+
+extern double g_take_profit = 0.0;	// [止赢] 
+
+// ==========================================================================
+
+
 #include <wq_bars.mqh>
 
 class order_info 
@@ -183,6 +189,7 @@ void order2::open(int order_type, double lots, double sl, string comment)
 	lots = NormalizeDouble(lots, 2);
 	int i = 0;
 	int ticket = 0;
+	double tp = 0;
 	switch (order_type)
 	{
 		case OP_BUY:
@@ -211,7 +218,12 @@ void order2::open(int order_type, double lots, double sl, string comment)
 					sl = NormalizeDouble(sl, g_digits);
 					sl = NormalizeDouble(sl, g_digits);
 				}
-				ticket = OrderSend(_symbol, OP_BUY, lots, Ask, 0, sl, 0, NULL, _magic);
+				tp = 0;
+				if (g_take_profit >= 2.0)
+				{
+					tp = Ask + (Ask - sl) * g_take_profit;
+				}
+				ticket = OrderSend(_symbol, OP_BUY, lots, Ask, 0, sl, tp, NULL, _magic);
 				if (ticket < 0)
 				{
 					_last_err = GetLastError();
@@ -278,7 +290,12 @@ void order2::open(int order_type, double lots, double sl, string comment)
 					sl = MathMax(sl, Ask + (g_stop_level + g_spread) * g_point);
 					sl = NormalizeDouble(sl, g_digits);
 				}
-				ticket = OrderSend(_symbol, OP_SELL, lots, Bid, 0, sl, 0, NULL, _magic);
+				tp = 0;
+				if (g_take_profit >= 2.0)
+				{
+					tp = Bid - (sl - Bid) * g_take_profit;
+				}
+				ticket = OrderSend(_symbol, OP_SELL, lots, Bid, 0, sl, tp, NULL, _magic);
 				if (ticket < 0)
 				{
 					_last_err = GetLastError();

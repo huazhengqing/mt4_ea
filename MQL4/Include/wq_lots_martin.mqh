@@ -65,6 +65,10 @@ double lots_martin::calc_lots_martin_by_trade(int order_type)
 			}
 		}
 	}
+	if (g_order._trade_get_size >= 7)
+	{
+		_calc_lots_tudo = g_order._trade[0]._lots;
+	}
 	if (_calc_lots_tudo > g_lots_max)
 	{
 		_calc_lots_tudo = g_lots_max;
